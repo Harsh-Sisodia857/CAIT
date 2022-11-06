@@ -1,23 +1,62 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Task from './Component/Task';
+import TaskList from './Component/TaskList';
+import TaskState from './Context/TaskState';
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TaskState>
+        <div className="row">
+          <div className="col-md-2" id='sidebar'>
+            <div className='logo'>
+              <img src="https://caitindia.com/wp-content/uploads/2021/03/CAIT-Logo-White-Highlight.png" alt="CAIT" />
+            </div>
+            <div className="menu">
+              <span>
+                <span className="icon"><img src="/icons/menu.png" alt="" /></span>
+                <span>My Apps</span>
+              </span>
+            </div>
+            <div className="menu">
+              <span>
+                <span className="icon"><img src="./icons/selection.png" alt="" /></span>
+                <span>Resources</span>
+              </span>
+            </div>
+            <div className="sidebar-header">
+              <div className="menu">
+                <span>
+                  <span className="icon"><img src="./icons/home.png" alt="" /></span>
+                  <span>My Organization</span>
+                </span>
+              </div>
+              <div className="menu">
+                <span>
+                  <span className="icon">
+                    <img src="./icons/settings.png" alt="" />
+                  </span>
+                  <span>Settings</span>
+                </span>
+              </div>
+              <div className="menu">
+                <span>
+                  <span className="icon"><img src="/icons/logout.png" alt="" /></span>
+                  <span>Logout</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-10" id='taskContainer'>
+            <div>
+              <Task />
+            </div>
+            <div>
+              <TaskList />
+            </div>
+          </div>
+        </div>
+      </TaskState>
     </div>
   );
 }
