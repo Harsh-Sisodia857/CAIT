@@ -1,4 +1,5 @@
 import React from "react";
+import AddTask from "./AddTask";
 import TaskDetail from "./TaskDetail";
 function Task() {
   const value = new Date();
@@ -39,7 +40,7 @@ function Task() {
           <TaskDetail
             color={"#e68a00"}
             taskStatus={"Ongoing"}
-            taskNumber={24}
+            taskNumber={66}
           />
           <TaskDetail
             color={"#ff0000"}
@@ -49,20 +50,17 @@ function Task() {
           <TaskDetail
             color={"#66ff33"}
             taskStatus={"Completed"}
-            taskNumber={24}
+            taskNumber={10}
           />
           <TaskDetail
             color={"#6666ff"}
             taskStatus={"Total Assigned"}
-            taskNumber={24}
+            taskNumber={100}
           />
         </div>
       </div>
-      <div class="d-flex justify-content-center">
-        <button className="btn addtaskbutton">
-          <img className="icons" src="./icons/plus.png" alt="" />
-          <span>Add To Cart</span>
-        </button>
+      <div className="d-flex justify-content-center">
+       <AddTask/>
       </div>
     </div>
   );

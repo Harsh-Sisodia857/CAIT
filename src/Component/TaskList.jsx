@@ -1,17 +1,21 @@
 import React, { useContext, useEffect } from "react";
+import { useSelector } from "react-redux";
 import TaskContext from "../Context/TaskContext";
 import TaskTable from "./TaskTable";
 
 function TaskList() {
-      const Context = useContext(TaskContext);
-    const { getTasks, tasks } = Context;
-    console.log(tasks);
+ 
+  const Task = useSelector(state => state.task)
+  console.log(Task);
+    const Context = useContext(TaskContext);
+    let { getTasks, tasks } = Context;
         useEffect(() => {
-          getTasks();
-          console.log(tasks);
+          getTasks()
+          console.log({ ...tasks, ...Task })
           // eslint-disable-next-line
         }, [])
-    
+        
+    console.log(tasks);
     return (
       <div className="container">
         <table className="table">

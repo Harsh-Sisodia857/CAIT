@@ -12,19 +12,22 @@ function App() {
             <div className='logo'>
               <img src="https://caitindia.com/wp-content/uploads/2021/03/CAIT-Logo-White-Highlight.png" alt="CAIT" />
             </div>
-            <div className="menu">
-              <span>
-                <span className="icon"><img src="/icons/menu.png" alt="" /></span>
-                <span>My Apps</span>
-              </span>
-            </div>
-            <div className="menu">
-              <span>
-                <span className="icon"><img src="./icons/selection.png" alt="" /></span>
-                <span>Resources</span>
-              </span>
-            </div>
+          <div className="menubar">
             <div className="sidebar-header">
+              <div className="menu">
+                <span>
+                  <span className="icon"><img src="/icons/menu.png" alt="" /></span>
+                  <span>My Apps</span>
+                </span>
+              </div>
+              <div className="menu">
+                <span>
+                  <span className="icon"><img src="./icons/selection.png" alt="" /></span>
+                  <span>Resources</span>
+                </span>
+              </div>
+            </div>
+            <div className="sidebar-footer">
               <div className="menu">
                 <span>
                   <span className="icon"><img src="./icons/home.png" alt="" /></span>
@@ -44,6 +47,7 @@ function App() {
                   <span className="icon"><img src="/icons/logout.png" alt="" /></span>
                   <span>Logout</span>
                 </span>
+              </div>
               </div>
             </div>
           </div>

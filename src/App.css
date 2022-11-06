@@ -32,7 +32,7 @@ row{
     width: 35px;
     margin-left: 8px;
 }
-.sidebar-header{
+.sidebar-footer{
   margin-top: auto;
 }
 .card{
@@ -50,6 +50,21 @@ button img{
   font-size: 20px;
   text-align: left;
 }
+.addborder{
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+}
+
+.modal-body {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.col{
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
 .icon img {
   width: 45px;
     height: 34px;
@@ -60,7 +75,9 @@ button img{
   height: 80px;
   width: 70%;
 }
-
+.modal-dialog {
+  max-width: 70% !important;
+}
 .addtaskbutton{
    margin-right: 40px;
     margin-top: 10px;
